@@ -34,7 +34,8 @@
                 <section>
                     <h2>Qué es <i class="fa fa-git"></i>?</h2>
                     <ul>
-                        <li class="fragment">Control de versiones</li>
+                        <li>Control de versiones</li>
+                        <li class="fragment">Vigila <strong>SOLO</strong> los archivos</li>
                         <li class="fragment">Alternativas
                             <ul>
                                 <li>SVN (SubVersion)</li>
@@ -54,25 +55,60 @@
                         <img class="stretch" src="img/folder-structure.png" alt="">
                     </section>
                     <section>
-                        <h2>.gitignore y .gitkeep</h2>
-                    </section>
-                </section>
+                        <h2>.gitignore</h2>
+                        <p>Recurso propio de <i class="fa fa-git"></i> <small><a href="https://stackoverflow.com/a/8418504/1713103">[Fuente]</a></small></p>
+                        <pre class="fragment">
+                            <code data-trim data-noescape>
+                                    # Ignore everything in the root except the "wp-content" directory.
+                                    /*
+                                    !.gitignore
+                                    !wp-content/
 
-                <section>
-                    <h2>Desarrollo de Plugins</h2>
+                                    # Ignore everything in the "wp-content" directory, except the "plugins"
+                                    # and "themes" directories.
+                                    wp-content/*
+                                    !wp-content/plugins/
+                                    !wp-content/themes/
+
+                                    # Ignore everything in the "plugins" directory, except the plugins you
+                                    # specify (see the commented-out examples for hints on how to do this.)
+                                    wp-content/plugins/*
+                                    # !wp-content/plugins/my-single-file-plugin.php
+                                    # !wp-content/plugins/my-directory-plugin/
+
+                                    # Ignore everything in the "themes" directory, except the themes you
+                                    # specify (see the commented-out example for a hint on how to do this.)
+                                    wp-content/themes/*
+                                    # !wp-content/themes/my-theme/
+                            </code>
+                        </pre>
+                    </section>
                 </section>
 
                 <section>
                     <section>
-                        <h2>Desarrollo de Themes</h2>
+                        <h2>Desarrollo de Plugins y Temas</h2>
+                        <ul>
+                            <li>Decidir el enfoque: repositorios independientes o general</li>
+                            <li class="fragment">Delegar instalacion de plugins dependientes
+                                <ul>
+                                    <li class="fragment"><a href="http://mypluginmanager.com/">My Plugin Manager</a></li>
+                                    <li class="fragment"><a href="http://tgmpluginactivation.com/">TGM Plugin Activation <i class="fa fa-check-circle"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="fragment">.gitignore <i>node_modules</i></li>
+                        </ul>
                     </section>
                     <section>
-                        <h3>Manejo de dependencias</h3>
+                        <h2>.gitkeep o .keep</h2>
+                        <p>Convencion creada por usuarios de <i class="fa fa-git"></i></p>
+                        <img class="fragment" src="img/gitkeep.png">
                     </section>
                 </section>
 
                 <section>
-                    <h2>Branch Workflows</h2>
+                    <h2>Branch Work Flow</h2>
+                    <img class="stretch" src="img/gwf-semantic.png">
                 </section>
 
                 <section>
@@ -81,37 +117,91 @@
                     </section>
                     <section>
                         <h3>Github <i class="fa fa-github"></i></h3>
+
+                        <h4>Pros</strong></h4>
+                        <ul>
+                            <li class="fragment">Repositorios ilimitados gratuitos públicos</li>
+                            <li class="fragment">Fuerte comunidad OpenSource (Pull Request e Issues)</li>
+                            <li class="fragment">Github Pages <a href="emamut.github.io">emamut.github.io</a></li>
+                        </ul>
+
+                        <h4 class="fragment">Contras</strong></h4>
+                        <ul>
+                            <li class="fragment">Pagar por repositorios privados</li>
+                            <li class="fragment"><a href="https://desktop.github.com/">Github Desktop</a> solo Win y MacOS</li>
+                        </ul>
                     </section>
                     <section>
-                        <h3>Bitbucket <i class="fa fa-bitbucket"></i></h3>
+                        <h3>Github <i class="fa fa-github"></i></h3>
+                        <img src="img/github-pricing.png" class="stretch">
+                    </section>
+                    <section>
+                        <h3>BitBucket <i class="fa fa-bitbucket"></i></h3>
+
+                        <h4>Pros</strong></h4>
+                        <ul>
+                            <li class="fragment">Empresa consolidada en el mercado con User Groups</li>
+                            <li class="fragment">Integración natural con herramientas agiles (Jira, Bamboo, Confluence, Trello, etc)</li>
+                            <li class="fragment">BitBucket Pages</li>
+                        </ul>
+
+                        <h4 class="fragment">Contras</strong></h4>
+                        <ul>
+                            <li class="fragment">Poca comunidad</li>
+                            <li class="fragment">UI compleja pero mejorada</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>BitBucket <i class="fa fa-bitbucket"></i></h3>
+                        <img src="img/bitbucket-pricing.png" class="stretch">
                     </section>
                     <section>
                         <h3>Gitlab <i class="fa fa-gitlab"></i></h3>
+                        <h4>Pros</strong></h4>
+                        <ul>
+                            <li class="fragment">Totalmente gratuito</li>
+                            <li class="fragment">Auto-hosteable</li>
+                        </ul>
+
+                        <h4 class="fragment">Contras</strong></h4>
+                        <ul>
+                            <li class="fragment">Gitlab rm -rf <a href="https://about.gitlab.com/2017/02/01/gitlab-dot-com-database-incident/">(Comunicado)</a></li>
+                            <img class="fragment" src="./img/Sudo-RM.gif"class="stretch">
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Gitlab <i class="fa fa-gitlab"></i></h3>
+                        <img src="img/gitlab-pricing.png" class="stretch">
                     </section>
                 </section>
 
                 <section>
-                        <section>
-                            <h2><i class="fa fa-git"></i> GUI</h2>
-                        </section>
-                        <section>
-                            <h3>SourceTree</h3>
-                        </section>
-                        <section>
-                            <h3>GitKraken</h3>
-                        </section>
-                        <section>
-                            <h3>SmartGit</h3>
-                        </section>
+                    <section>
+                        <h2><i class="fa fa-git"></i> GUI</h2>
                     </section>
+                    <section>
+                        <h3>SourceTree</h3>
+                        <img src="./img/sourcetree.png" alt="" class="stretch">
+                    </section>
+                    <section>
+                        <h3>GitKraken</h3>
+                        <img src="./img/gitkraken.png" alt="" class="stretch">
+                    </section>
+                    <section>
+                        <h3>SmartGit</h3>
+                        <img src="./img/smartgit.png" alt="" class="stretch">
+                    </section>
+                </section>
 
                 <section>
                     <h1>Gracias!</h1>
                     <ul>
-                        <li><a href="https://github.com/wp-tulua/git-on-wp-dev">https://github.com/emamut/git-on-wp-dev</a> (Repositorio)</li>
+                        <li><a href="https://github.com/wp-tulua/git-on-wp-dev">https://github.com/wp-tulua/git-on-wp-dev</a> (Repositorio)</li>
                         <li><a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> (Presentación)</li>
                         <li><a href="http://fontawesome.io/">FontAwesome</a> (Iconos)</li>
                     </ul>
+
+                    <p class="fragment"><i>De Balboa pal mundo! </i> <i class="fa fa-smile-o"></i></p>
                 </section>
             </div>
         </div>
